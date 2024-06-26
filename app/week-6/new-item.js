@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -27,7 +26,7 @@ export default function NewItem({ onAddItem }) {
 
     return (
         <div className= "flex justify-left pt-5 pl-4">
-        <div className="bg-slate-950 pl-8 pr-8 pt-6 pb-5 rounded-lg">
+        <div className="bg-indigo-500 pl-8 pr-8 pt-6 pb-5 rounded-lg">
         <form className="flex flex-col items-center" onSubmit={handleSubmit}>
             <label className="mt-4">
                 <input type="text" placeholder="Item Name" id="Item Name" value={name} onChange={(event) => setName(event.target.value)} className="border border-gray-300 rounded p-2" />
@@ -45,19 +44,18 @@ export default function NewItem({ onAddItem }) {
                     <option value="frozen foods">Frozen Foods</option>
                     <option value="beverages">Beverages</option>
                     <option value="snacks">Snacks</option>
-                    <option value="canned goods">Canned Goods</option>
-                    <option value="dry goods">Dry Goods</option>
                     <option value="household">Household</option>
                     <option value="other">Other</option>
+                    <option value="canned goods">Canned Goods</option>
+                    <option value="dry goods">Dry Goods</option>
                 </select>
             </label>
             </div>
             <div className="mt-6">
-            <button type="submit" onClick={handleButtonClick} className="text-white bg-blue-400 hover:bg-blue-600 rounded w-20 p-3">+</button>
+            <button type="submit" onClick={handleButtonClick} className="text-white bg-blue-400 hover:bg-blue-600 rounded w-20 p-3">Add</button>
             </div>
         </form>
         </div>
         </div>
     );
 }
-
