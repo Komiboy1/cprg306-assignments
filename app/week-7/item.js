@@ -1,8 +1,9 @@
-export default function Item({ name, quantity, category}) {
+export default function Item({ name, quantity, category, onSelect}) {
+
     return (
-        <div className="p-3 m-4 text-white bg-blue-950 w-2/12"> 
+        <div className="text-white p-4 m-2 bg-blue-950 max-w-sm hover:bg-blue-700"> 
         <ul>
-            <li>
+            <li onClick={() => onSelect(name)}>
             <p className="font-extrabold text-xl">{name}</p>
             <p className="text-sm">Buy {quantity} in {category}</p>
             </li>
@@ -10,4 +11,3 @@ export default function Item({ name, quantity, category}) {
         </div>
     )
 }
-
